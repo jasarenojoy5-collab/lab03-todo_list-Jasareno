@@ -4,23 +4,25 @@
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #f8f9fa;
+    background-color: #f1f8f5; /* Soft light green-tinted background */
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(46, 125, 50, 0.1);
 }
 
 .title {
     text-align: center;
     font-size: 24px;
-    color: #333;
+    color: #2e7d32; /* Medium-dark green */
     margin-bottom: 20px;
 }
-.input-container{
+
+.input-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
 .todo_main {
     margin: 60px;
     max-width: 100%;
@@ -32,12 +34,13 @@
 }
 
 .todo-card {
-    width: 300px; /* Adjust the width of the cards as needed */
+    width: 300px;
     padding: 20px;
     background-color: white;
     border-radius: 8px;
     margin-bottom: 20px;
-    border: 2px solid grey;
+    border: 2px solid #a5d6a7; /* Medium green border */
+    box-shadow: 0 4px 6px rgba(46, 125, 50, 0.05);
 }
 
 .heading-input {
@@ -45,9 +48,14 @@
     padding: 10px;
     font-size: 16px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #81c784; /* Soft green border */
     border-radius: 4px;
     outline: none;
+}
+
+.heading-input:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
 }
 
 .heading_todo {
@@ -62,10 +70,12 @@
     height: 40px;
     font-size: 20px;
     text-align: center;
+    color: #1b5e20;
 }
 
+/* Secondary Action / Delete buttons changed to a softer muted green or contrasting earthy tone */
 .delete-button {
-    background-color: #f44336;
+    background-color: #81c784; /* Medium soft green */
     color: #fff;
     border: none;
     padding: 7px 20px;
@@ -76,12 +86,22 @@
     height: 40px;
 }
 
+.delete-button:hover {
+    background-color: #66bb6a;
+}
+
 .delete-button-heading {
     height: 40px;
-    background-color: rgb(46, 163, 46);
+    background-color: #4caf50; /* Medium green */
     color: #fff;
     border: none;
     border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button-heading:hover {
+    background-color: #388e3c;
 }
 
 .list-item {
@@ -91,17 +111,21 @@
     justify-content: center;
 }
 
-.delete-button:hover {
-    background-color: #d32f2f;
-}
-
 .list-input {
     width: 170px;
     height: 25px;
+    border: 1px solid #a5d6a7;
+    border-radius: 3px;
+    padding: 2px 6px;
+    outline: none;
+}
+
+.list-input:focus {
+    border-color: #4caf50;
 }
 
 .add-list-button {
-    background-color: rgb(46, 163, 46);
+    background-color: #4caf50; /* Medium green */
     color: #fff;
     border: none;
     padding: 7px 20px;
@@ -111,9 +135,13 @@
     transition: background-color 0.3s ease;
     margin-left: 25px;
 }
+
+.add-list-button:hover {
+    background-color: #388e3c;
+}
+
 .todo_inside_list {
     display: flex;
     gap: 140px;
     margin: 10px;
 }
-
